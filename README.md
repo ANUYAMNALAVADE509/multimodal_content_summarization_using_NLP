@@ -13,9 +13,10 @@ MultiModal Summarizer for YouTube + PDF → Smart Summaries with NLP &amp; RAG
 [![NLP](https://img.shields.io/badge/NLP-Transformers-green.svg)](https://huggingface.co/transformers/)
 [![RAG](https://img.shields.io/badge/RAG-RetrievalAugmented-orange.svg)](https://huggingface.co/docs/transformers/main/en/model_doc/rag)
 
+</div>
+
 **An AI-powered Document Question Answering System using Hybrid Retrieval, Local Large Language Models, and Retrieval-Augmented Generation (RAG).**
 
-</div>
 
 **From hours to highlights — AI summaries for every format.**
 
