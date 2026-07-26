@@ -2,7 +2,7 @@
 MultiModal Summarizer for YouTube + PDF → Smart Summaries with NLP &amp; RAG
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
 ![FAISS](https://img.shields.io/badge/Vector%20Database-FAISS-orange)
@@ -10,13 +10,12 @@ MultiModal Summarizer for YouTube + PDF → Smart Summaries with NLP &amp; RAG
 ![Ollama](https://img.shields.io/badge/LLM-Ollama-black)
 ![Mistral](https://img.shields.io/badge/Model-Mistral-purple)
 ![License](https://img.shields.io/badge/License-MIT-blue)
+[![NLP](https://img.shields.io/badge/NLP-Transformers-green.svg)](https://huggingface.co/transformers/)
+[![RAG](https://img.shields.io/badge/RAG-RetrievalAugmented-orange.svg)](https://huggingface.co/docs/transformers/main/en/model_doc/rag)
 
 **An AI-powered Document Question Answering System using Hybrid Retrieval, Local Large Language Models, and Retrieval-Augmented Generation (RAG).**
 
 </div>
-[![Python](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://www.python.org/)
-[![NLP](https://img.shields.io/badge/NLP-Transformers-green.svg)](https://huggingface.co/transformers/)
-[![RAG](https://img.shields.io/badge/RAG-RetrievalAugmented-orange.svg)](https://huggingface.co/docs/transformers/main/en/model_doc/rag)
 
 **From hours to highlights — AI summaries for every format.**
 
