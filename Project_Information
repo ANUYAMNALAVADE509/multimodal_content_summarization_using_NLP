@@ -1,0 +1,182 @@
+---
+
+# 💻 Technology Stack
+
+| Category | Technology |
+|------------|----------------------------|
+| Language | Python |
+| Frontend | Streamlit |
+| LLM | Mistral |
+| LLM Runtime | Ollama |
+| Framework | LangChain |
+| Vector Database | FAISS |
+| Sparse Retriever | BM25 |
+| Embedding Model | all-MiniLM-L6-v2 |
+| PDF Parser | PyPDF |
+| DOCX Parser | python-docx |
+| PPT Parser | python-pptx |
+| Data Processing | Pandas |
+
+---
+
+# 📥 Installation
+
+Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+Move into the project directory
+
+```bash
+cd AI-Document-Assistant
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Install Ollama
+
+Download Ollama from:
+
+https://ollama.com
+
+Pull the Mistral model
+
+```bash
+ollama pull mistral
+```
+
+Start Ollama
+
+```bash
+ollama serve
+```
+
+Run the Streamlit application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 🔍 How the System Works
+
+1. User uploads one or more documents.
+2. Text is extracted from the uploaded files.
+3. Documents are split into overlapping chunks.
+4. Sentence embeddings are generated.
+5. FAISS stores dense vectors.
+6. BM25 builds a keyword index.
+7. User asks a question.
+8. FAISS retrieves semantically relevant chunks.
+9. BM25 retrieves keyword-based chunks.
+10. Hybrid Retriever merges both results.
+11. Retrieved context is appended to the prompt.
+12. Mistral generates the final response.
+13. The response is streamed to the UI.
+14. Conversation history is stored in session memory.
+
+# 🧠 Retrieval Pipeline
+
+The retrieval pipeline combines two complementary retrieval techniques.
+
+## Dense Retrieval
+
+- Embedding Model
+- Semantic Similarity
+- FAISS
+
+Useful for:
+
+- Meaning-based search
+- Synonyms
+- Natural language queries
+
+---
+
+## Sparse Retrieval
+
+- BM25
+- Keyword Matching
+
+Useful for:
+
+- Technical terms
+- Exact phrases
+- Named entities
+
+---
+
+## Hybrid Retrieval
+
+Both retrievers execute independently.
+
+The retrieved chunks are merged.
+
+Duplicate chunks are removed.
+
+The final context is sent to the LLM.
+
+---
+
+# 💬 Conversational Memory
+
+The application maintains conversation history using Streamlit Session State.
+
+Memory is stored separately for:
+
+- Individual documents
+- All documents combined
+
+Recent interactions are appended to future prompts, enabling context-aware follow-up questions during the active session.
+
+---
+
+# 📚 Libraries Used
+
+- Streamlit
+- Pandas
+- PyPDF
+- python-docx
+- python-pptx
+- LangChain
+- LangChain Community
+- LangChain HuggingFace
+- FAISS
+- Sentence Transformers
+- BM25 Retriever
+- Ollama
+
+---
+
+# 🚀 Future Improvements
+
+Possible future enhancements include:
+
+- Persistent vector database storage
+- OCR support for scanned PDFs
+- Metadata-based source citations
+- Multi-user authentication
+- Response evaluation metrics
+- Document summarization mode
+- Image extraction and multimodal retrieval
+
+---
+
+# ⚠️ Current Limitations
+
+- Session-based memory is not persistent after restarting the application.
+- Vector indexes are rebuilt when documents are re-uploaded.
+- OCR is not implemented for image-based PDFs.
+- Responses depend on the quality of extracted document text.
+- Source citations are not displayed in generated responses.
+
+---
+
+
